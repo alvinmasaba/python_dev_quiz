@@ -9,10 +9,9 @@ headers = {
         }
 
 file = './input_data.csv'
-data = ar.AddressReader(file, URL, headers).gen_data()
-header = ['Company', 'Street', 'City', 'St', 'ZIPCode', 'Valid_Address']
-
+header = "Company,Street,City,St,ZIPCode,Address-Found\n"
+data = ar.AddressReader(file, URL, headers).parse()
 aw.AddressWriter(file, data, header).csv_writer()
 
 
-            
+    
