@@ -12,8 +12,8 @@ class AddressWriter:
         #write the header
         file.write(self.header)
 
-        #write each line from data
-        for line in self.data[1:]:
-            file.write(f"{line['companyName']},{line['address1']},{line['city']},{line['state']},{line['zip']},{line['resultStatus']}\n")
+        #write each line from data to the output file, excluding the header
+        for row in self.data[1:]:
+            file.write(f"{row['companyName']},{row['address1']},{row['city']},{row['state']},{row['zip']},{row['resultStatus']}\n")
         
         file.close()
