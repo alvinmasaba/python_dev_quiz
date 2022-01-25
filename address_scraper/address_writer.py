@@ -7,7 +7,7 @@ class AddressWriter:
         self.header = header
 
     def csv_writer(self):
-        file = open('./input_data.csv', mode = 'w', encoding='utf-8')
+        file = open(self.file, mode = 'w', encoding='utf-8')
 
         #write the header
         file.write(self.header)
