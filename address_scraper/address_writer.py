@@ -1,5 +1,3 @@
-# class for writing to a csv file
-
 class AddressWriter:
     def __init__(self, file, data, header):
         self.data = data

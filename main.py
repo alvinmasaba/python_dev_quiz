@@ -1,5 +1,6 @@
 from address_scraper import constants as cons, address_reader as ar, address_writer as aw
 
+
 def main():
     # Post input file data to url, receive a response and return a list of formatted data
     data = ar.AddressReader(cons.FILE, cons.URL, cons.HEADERS).format_data()

@@ -1,6 +1,6 @@
 import requests
 
-# class for posting data from csv rows to a url and compiling each response into a list
+
 class AddressReader:
     def __init__(self, file, url, headers):
         self.data = []
@@ -18,7 +18,7 @@ class AddressReader:
             data = self.fetch_response(payload)
             # append the response to list
             self.data.append(data)
-
+            
         csv_file.close()
 
         return self.data
